@@ -59,73 +59,6 @@ function news_ct_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-announcement-field_announcement_date'.
-  $field_instances['node-announcement-field_announcement_date'] = array(
-    'bundle' => 'announcement',
-    'deleted' => 0,
-    'description' => 'Date you want displayed for this news item.',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-        ),
-        'type' => 'date_default',
-        'weight' => 1,
-      ),
-      'frontpage' => array(
-        'label' => 'hidden',
-        'module' => 'date',
-        'settings' => array(
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
-        ),
-        'type' => 'date_default',
-        'weight' => 1,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_announcement_date',
-    'label' => 'Display Date',
-    'required' => 0,
-    'settings' => array(
-      'default_value' => 'now',
-      'default_value2' => 'same',
-      'default_value_code' => '',
-      'default_value_code2' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'date',
-      'settings' => array(
-        'display_all_day' => 0,
-        'increment' => 15,
-        'input_format' => 'm/d/Y - g:i:sa',
-        'input_format_custom' => '',
-        'label_position' => 'above',
-        'text_parts' => array(),
-        'year_range' => '-3:+3',
-      ),
-      'type' => 'date_popup',
-      'weight' => 6,
-    ),
-  );
-
   // Exported field_instance: 'node-announcement-field_caption_news'.
   $field_instances['node-announcement-field_caption_news'] = array(
     'bundle' => 'announcement',
@@ -228,64 +161,11 @@ function news_ct_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-announcement-field_end_announcement'.
-  $field_instances['node-announcement-field_end_announcement'] = array(
-    'bundle' => 'announcement',
-    'deleted' => 0,
-    'description' => 'Date you want the news item to expire from the carousels.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
-      ),
-      'frontpage' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 6,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_end_announcement',
-    'label' => 'Expiration',
-    'required' => 0,
-    'settings' => array(
-      'default_value' => 'strtotime',
-      'default_value2' => 'same',
-      'default_value_code' => '+30 days',
-      'default_value_code2' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'date',
-      'settings' => array(
-        'display_all_day' => 0,
-        'increment' => 15,
-        'input_format' => 'm/d/Y - g:i:sa',
-        'input_format_custom' => '',
-        'label_position' => 'above',
-        'text_parts' => array(),
-        'year_range' => '-3:+3',
-      ),
-      'type' => 'date_popup',
-      'weight' => 7,
-    ),
-  );
-
   // Exported field_instance: 'node-announcement-field_hp_carousel_start'.
   $field_instances['node-announcement-field_hp_carousel_start'] = array(
     'bundle' => 'announcement',
     'deleted' => 0,
-    'description' => 'The date range that the content will appear on the home page carousel',
+    'description' => 'The date range that the content will appear on the News carousels',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -315,7 +195,7 @@ function news_ct_feature_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_hp_carousel_start',
-    'label' => 'hp carousel start',
+    'label' => 'Start and End Date',
     'required' => 0,
     'settings' => array(
       'default_value' => 'now',
@@ -382,7 +262,7 @@ function news_ct_feature_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_image_announcement',
-    'label' => 'Image',
+    'label' => 'Upload Image',
     'required' => 0,
     'settings' => array(
       'alt_field' => 1,
@@ -473,15 +353,11 @@ function news_ct_feature_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Add Media');
   t('Caption');
-  t('Date you want displayed for this news item.');
-  t('Date you want the news item to expire from the carousels.');
   t('Description');
-  t('Display Date');
-  t('Expiration');
-  t('Image');
-  t('The date range that the content will appear on the home page carousel');
+  t('Start and End Date');
+  t('The date range that the content will appear on the News carousels');
+  t('Upload Image');
   t('Video');
-  t('hp carousel start');
 
   return $field_instances;
 }
